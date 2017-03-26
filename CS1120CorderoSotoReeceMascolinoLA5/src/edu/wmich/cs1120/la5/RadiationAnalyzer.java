@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class RadiationAnalyzer {
 	private IMapCreator mc1 = new MapCreatorFromTxt();
+	private IMapCreator mc2 = new MapCreatorFromDat();
 	private ArrayList<IArea> path = new ArrayList<IArea>();
 	
 	
@@ -22,7 +23,7 @@ public class RadiationAnalyzer {
 	public String getAnalysis(){
 double total=0;
 		
-		return total;
+		return total+"";
 	}
 	public void setAnalysis(String analysis){
 		
@@ -32,7 +33,5 @@ double total=0;
 	public String toString() {
 		return "Radiation Analyzer";
 	}
-	public double calculateRadiation(){
-		
-	}
+	
 }
