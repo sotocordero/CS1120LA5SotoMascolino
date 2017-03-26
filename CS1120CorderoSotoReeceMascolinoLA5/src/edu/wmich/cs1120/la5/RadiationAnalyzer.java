@@ -20,7 +20,9 @@ public class RadiationAnalyzer {
 	}
 	
 	public String getAnalysis(){
+double total=0;
 		
+		return total;
 	}
 	public void setAnalysis(String analysis){
 		
@@ -31,8 +33,6 @@ public class RadiationAnalyzer {
 		return "Radiation Analyzer";
 	}
 	public double calculateRadiation(){
-		double total=0;
 		
-		return total;
 	}
 }
