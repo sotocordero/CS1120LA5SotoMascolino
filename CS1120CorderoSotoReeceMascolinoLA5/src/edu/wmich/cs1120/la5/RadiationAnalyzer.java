@@ -13,7 +13,7 @@ public class RadiationAnalyzer {
 		}
 	
 	public void setPath(ArrayList<IArea> path){
-		path= mc.getScanner().getPath();
+		path= mc1.getScanner().getPath(int a, int b);
 	}
 	
 	public void analyzePath(){

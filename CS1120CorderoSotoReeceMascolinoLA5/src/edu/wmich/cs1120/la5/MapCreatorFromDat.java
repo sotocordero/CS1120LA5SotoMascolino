@@ -16,7 +16,7 @@ public class MapCreatorFromDat implements IMapCreator{
 		FileOutputStream file=new FileOutputStream("terrain.dat");
 		DataOutputStream editor=new DataOutputStream(file);
 		ArrayList<Double> inputs=new ArrayList<Double>();
-		
+		int counter=0;
 	}
 
 	
