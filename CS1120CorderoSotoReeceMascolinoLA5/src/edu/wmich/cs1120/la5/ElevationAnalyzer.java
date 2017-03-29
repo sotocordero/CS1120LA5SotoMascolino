@@ -42,9 +42,5 @@ public class ElevationAnalyzer implements IRover{
 		return "Elevation Analyzer";
 	}
 	
-	public double elevationAnalyzer(){
-		double total=0;
-		
-		return total;
-	}
+	
 }
