@@ -5,7 +5,7 @@ public class BinaryExpression implements IExpression{
 	private IExpression left;
 	private IExpression right;
 	
-	public BinaryExpression(IExpression left,IExpression right, IOperation op){
+	public BinaryExpression(IOperation op, IExpression left,IExpression right){
 		this.left=left;
 		this.right=right;
 		this.op=op;
