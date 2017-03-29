@@ -6,6 +6,11 @@ public class Literal implements IExpression{
 		this.value=value1;
 	}
 	
+	/**
+	 * This method returns the value of
+	 * a literal.
+	 * @return the int value
+	 */
 	public Integer getValue(){
 		return value;
 	}

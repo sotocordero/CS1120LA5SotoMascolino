@@ -11,7 +11,12 @@ public class BinaryExpression implements IExpression{
 		this.op=op;
 		
 	}
-	
+	/**
+	 * This method returns the value from the binary expression by using
+	 * the perform method
+	 * 
+	 * @return Returns the value of the perform method
+	 */
 	public Integer getValue(){
 		return op.perform(left, right);
 		
