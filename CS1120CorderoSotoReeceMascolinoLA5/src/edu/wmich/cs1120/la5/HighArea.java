@@ -4,6 +4,10 @@ public class HighArea extends Area{
 	HighArea(){
 		super();
 	}
+	/**
+	 * 
+	 * @return Returns the double consumedEnergy
+	 */
 	public double calcConsumedEnergy(){
 		double consumedEnergy=getBasicEnergyCost() * 4;
 		
