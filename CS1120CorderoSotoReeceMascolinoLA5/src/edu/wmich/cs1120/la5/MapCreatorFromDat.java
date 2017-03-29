@@ -15,8 +15,26 @@ public class MapCreatorFromDat implements IMapCreator{
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		RandomAccessFile file=new RandomAccessFile("terrain.dat", "r");
 		int pointer=0;
-		ArrayList<Double> inputs=new ArrayList<Double>();
-		int counter=0;
+		
+		Integer val1;
+		Integer val2;
+		Character operator;
+		
+		for(int i=0;i<area.length;i++){
+			for(int j=0;j<area[0].length;j++){
+				area[i][j].setBasicEnergyCost(file.readDouble());
+				area[i][j].setElevation(file.readDouble());
+				area[i][j].setRadiation(file.readDouble());
+				operator=file.readChar();
+				val1=file.readInt();
+				val2=file.readInt();
+				
+				pointer=ExpressionFactory.getExpression(operator, val1, val2).getValue();
+				pointer=pointer*((3*Double.BYTES)+Character.BYTES+(2*Integer.BYTES));
+				file.seek(pointer);
+			}
+		}
+		
 	}
 
 	
