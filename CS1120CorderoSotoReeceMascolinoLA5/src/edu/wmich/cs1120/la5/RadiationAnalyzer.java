@@ -2,9 +2,9 @@ package edu.wmich.cs1120.la5;
 
 import java.util.ArrayList;
 
-public class RadiationAnalyzer {
+public class RadiationAnalyzer implements IRover{
 	//private IMapCreator mc1 = new MapCreatorFromTxt();
-	private IMapCreator mc2 = new MapCreatorFromDat();
+	//private IMapCreator mc2 = new MapCreatorFromDat();
 	private ArrayList<IArea> path = new ArrayList<IArea>();
 	private String analysis;
 	

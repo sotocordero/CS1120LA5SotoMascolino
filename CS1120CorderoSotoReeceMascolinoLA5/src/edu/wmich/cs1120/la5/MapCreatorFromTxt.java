@@ -15,7 +15,7 @@ import edu.wmich.cs1120.la5.HighArea;
 import edu.wmich.cs1120.la5.LowArea;
 import edu.wmich.cs1120.la5.TerrainScanner;
 
-public class MapCreatorFromTxt {
+public class MapCreatorFromTxt implements IMapCreator{
 	private TerrainScanner scanner=new TerrainScanner();
 	private Area[][] area=new Area[10][10];
 	/**

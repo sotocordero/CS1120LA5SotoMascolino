@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import edu.wmich.cs1120.la5.TerrainScanner;
 
 public class ElevationAnalyzer implements IRover{
-	private IMapCreator mc = new MapCreatorFromDat();
+	private IMapCreator mc ;
 	private ArrayList<IArea> path = new ArrayList<IArea>();
 	private String analysis;
 	
