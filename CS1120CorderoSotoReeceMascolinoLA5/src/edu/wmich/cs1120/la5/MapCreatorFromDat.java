@@ -7,11 +7,28 @@ import java.util.ArrayList;
 import java.io.*;
 
 
-
+/**
+ * 
+ * @author sotocordero
+ *
+ */
 public class MapCreatorFromDat implements IMapCreator{
 	private TerrainScanner scanner=new TerrainScanner();
 	private IArea[][] area=new IArea[10][10];
 	
+	/**
+	 * @param fileName: Name of the random access file 
+	 * @param threshold: threshold input for area calculations
+	 * @param pointer: Marks location of next file input
+	 * @param val1: integer input from data file used for calculations in finding the next pointer position
+	 * @param val2: integer input from data file used for calculations in finding the next pointer position
+	 * @param operator: input from data file used for calculations in finding the next pointer position
+	 * @param temp1: temporary storage for energy data 
+	 * @param temp2: temporary storage for elevation data and used for area calculations
+	 * @param temp3: temporary storage for radiation data and used for area calculations
+	 * 
+	 * 
+	 */
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		RandomAccessFile file=new RandomAccessFile(fileName, "r");
 		int pointer=0;
@@ -63,13 +80,18 @@ public class MapCreatorFromDat implements IMapCreator{
 		scanner.setTerrain(area);
 	}
 
-	
+	/**
+	 * 
+	 * @return scanner: returns the scanner object
+	 */
 	public TerrainScanner getScanner() {
 		return scanner;
 		
 	}
 
-	
+	/**
+	 * @param Scanner: the terrainScanner object
+	 */
 	public void setScanner(TerrainScanner scanner) {
 		this.scanner=scanner;
 	}
