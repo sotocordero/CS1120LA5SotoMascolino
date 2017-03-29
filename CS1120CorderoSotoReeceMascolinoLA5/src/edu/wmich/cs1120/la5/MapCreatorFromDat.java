@@ -13,8 +13,8 @@ public class MapCreatorFromDat implements IMapCreator{
 	private IArea[][] area=new IArea[10][10];
 	
 	public void scanTerrain(String fileName, int threshold) throws IOException {
-		FileOutputStream file=new FileOutputStream("terrain.dat");
-		DataOutputStream editor=new DataOutputStream(file);
+		RandomAccessFile file=new RandomAccessFile("terrain.dat", "r");
+		int pointer=0;
 		ArrayList<Double> inputs=new ArrayList<Double>();
 		int counter=0;
 	}

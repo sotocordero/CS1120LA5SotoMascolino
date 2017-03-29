@@ -1,13 +1,13 @@
 package edu.wmich.cs1120.la5;
-import edu.wmich.cs1120.la3.Area;
-import edu.wmich.cs1120.la3.MapCreator;
+
 import edu.wmich.cs1120.la5.TerrainScanner;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class EnergyAnalyzer implements IRover{
-	private MapCreator mc = new MapCreator();
+	private IMapCreator mc = new MapCreatorFromDat();
 	private ArrayList<IArea> path = new ArrayList<IArea>();
+	private String analysis;
 	
 	
 public ArrayList<IArea> getPath(){
@@ -15,22 +15,24 @@ public ArrayList<IArea> getPath(){
 	}
 	
 	public void setPath(ArrayList<IArea> path){
-		path= mc.getScanner().getPath();
+		this.path=path;
 	}
 	
 	public void analyzePath(){
+		double sum = 0;
 		
+		for(int i=0;i<path.size();i++){
+			sum=sum+path.get(i).calcConsumedEnergy();
+		}
+		
+		setAnalysis(""+sum);
 	}
 	
 	public String getAnalysis(){
-		double total=0;
-		for(int i=0;i<path.size();i++){
-			total=path.get(i).calcConsumedEnergy()+total;
-		}
-		return total+"";
+		return analysis;
 	}
 	public void setAnalysis(String analysis){
-		
+		this.analysis=analysis;
 	}
 
 	@Override

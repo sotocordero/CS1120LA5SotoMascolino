@@ -13,16 +13,8 @@ public class LA5Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		//MainWindow.startGUI();
-		FileOutputStream file=new FileOutputStream("terrain.dat");
-		DataOutputStream editor=new DataOutputStream(file);
-		ArrayList<Double> inputs=new ArrayList<Double>();
-		int counter=0;
+		MainWindow.startGUI();
 		
-		String data;
-		System.out.println(data);
-		System.out.println(file);
-		//inputs.add();
 		
 		
 		
