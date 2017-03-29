@@ -10,11 +10,24 @@ public class ExpressionFactory {
 	public static IExpression getExpression(char operator, int
 	val1, int val2) {
 		IOperation operate;
+		IExpression left;
+		IExpression right;
+		IExpression total;
+		left=new Literal(val1);
+		right= new Literal(val2);
 		if(operator== '+'){
 			operate=new Addition();
-			return operate.;
+			total=new BinaryExpression(operate, left, right);
+			return total;
 		}
-		
+		else{
+			operate=new Subtraction();
+			total=new BinaryExpression(operate, left, right);
+			return total;
+		}
+		//Double.BYTES;
+		//Integer.BYTES;
+		//Character.BYTES;
 		return null;
 	
 	}
