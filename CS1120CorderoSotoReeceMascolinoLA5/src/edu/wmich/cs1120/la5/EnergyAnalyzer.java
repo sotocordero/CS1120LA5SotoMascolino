@@ -9,15 +9,25 @@ public class EnergyAnalyzer implements IRover{
 	private ArrayList<IArea> path = new ArrayList<IArea>();
 	private String analysis;
 	
-	
+	/**
+	 * getter for ArrayList of IArea
+	 * @return Returns ArrayList Path
+	 */
 public ArrayList<IArea> getPath(){
 		return path;
 	}
 	
+/**
+ * setter for ArrayList Path
+ * @param ArrayList for the setter
+ */
 	public void setPath(ArrayList<IArea> path){
 		this.path=path;
 	}
-	
+	/**
+	 * 
+	 * 
+	 */
 	public void analyzePath(){
 		double sum = 0;
 		
@@ -27,10 +37,18 @@ public ArrayList<IArea> getPath(){
 		
 		setAnalysis(""+sum);
 	}
-	
+	/**
+	 * getter for analysis
+	 * @return String analysis
+	 */
 	public String getAnalysis(){
 		return analysis;
 	}
+	
+	/**
+	 *setter for analysis
+	 *@param String for setter
+	 */
 	public void setAnalysis(String analysis){
 		this.analysis=analysis;
 	}
